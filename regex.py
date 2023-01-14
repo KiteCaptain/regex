@@ -48,7 +48,10 @@ def ten_character_regex(string: str) -> str:
     
 # Validating email
 def email_validate_regex(email: str) -> str:
-    pattern = re.compile("^[a-zA-Z0-9\.\-_]+@{1}[a-zA-Z0-9]+\.{1}[a-zA-Z]{2,4}$")
+    pattern = re.compile("^[a-zA-Z0-9\.\-_]+@{1}[a-zA-Z0-9\-]+\.{1}[a-zA-Z]{2,4}$")
     print(pattern.search(email))
 
-email_validate_regex("admin@captainkite.teh")
+email_validate_regex("admin@captainkite.tech")
+email_validate_regex("admin@captain-kite.smart")
+email_validate_regex("admin@captain-kite.tech")
+email_validate_regex("ad_--min@captainkite.tech")
